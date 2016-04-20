@@ -4,10 +4,12 @@ public class Fibonacci {
 	private int n1;
 	private int n2;
 	
+	//Contrutor inicializando os valores das variaveis.
 	public Fibonacci() {
 		this.n1=0;
 		this.n2=1;
 	}
+	
 	public int getN1() {
 		return n1;
 	}
@@ -21,6 +23,7 @@ public class Fibonacci {
 		this.n2 = n2;
 	}
 
+	// Executando a sequencia Fibonacci com a quantidade escolhida pelo usuario.
 	public void sequenceFibonacci(int v){
 		System.out.print(n1);
 		for (int i = 0; i < v; i++) {
