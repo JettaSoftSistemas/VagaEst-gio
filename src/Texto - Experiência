@@ -1,0 +1,19 @@
+Java + Hibernate
+
+  Um dos frameworks mais interessantes que já pude utilizar em projetos Java está disponível em www.hibernate.org. A modelagem
+de mapeamento Objeto Relacional descomplica a camada de abstração Data Access Object (D.A.O) e transforma rotinas de persistência 
+de dados, e consultas, em tarefas muito simples e rápidas.
+
+  Utilizei este framework em projeto Java EE com Web Container Apache Tomcat + PostgreSQL, fazendo uso do arquivo de mapeamento 
+XML Deployment Descriptor, Servlets e JavaServer Pages. 
+
+  A parte interessante do Hibernate nativo é a flexibilidade de uso, com métodos de persistência persist/save, uso de objeto 
+relacionais e a possibilidade de realizar consultas genéricas e parametrizáveis. A facilidade de se criar objetos de controle de 
+transação e tratamento de exceção também é notável, além da possibilidade de se utilizar AUTO COMMIT para pequenos projetos. 
+
+  Desta forma a camada de persistência é simples e descomplicada, persistindo dados objeto relacionais com facilidade e ótimo 
+desempenho, obviamente a relação Objeto/Entidade do banco de dados deve ser muito bem modelada e mantida. 
+
+  De negativo para quem está começando com o framework é necessário entender bem alguns conceitos de D.A.O antes de sair implementando
+rotinas com o Hibernate, caso contrário o código fonte fica um caos. Bons conhecimentos sobre a SessionFactory e as suas configurações    
+são fundamentais para a correta utilização do framework.
