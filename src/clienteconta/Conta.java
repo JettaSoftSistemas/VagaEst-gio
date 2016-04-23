@@ -1,7 +1,7 @@
-package clienteConta;
+package clienteconta;
 
-import clienteConta.Agencia;
-import clienteConta.Cliente;
+import clienteconta.Agencia;
+import clienteconta.Cliente;
 
 class Conta {
 

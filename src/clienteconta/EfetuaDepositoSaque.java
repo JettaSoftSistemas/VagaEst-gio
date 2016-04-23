@@ -1,10 +1,11 @@
-package clienteConta;
+package clienteconta;
 
-import clienteConta.Agencia;
-import clienteConta.Cliente;
-import clienteConta.Conta;
-import rotinasIo.CriaSalvaArquivo;
 import javax.swing.JOptionPane;
+
+import clienteconta.Agencia;
+import clienteconta.Cliente;
+import clienteconta.Conta;
+import rotinasio.CriaSalvaArquivo;
 
 public class EfetuaDepositoSaque {
 	

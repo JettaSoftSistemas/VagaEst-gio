@@ -1,4 +1,4 @@
-package rotinasIo;
+package rotinasio;
 
 import java.io.File;
 import java.io.FileReader;
@@ -60,8 +60,8 @@ public class CriaSalvaArquivo {
 				FileWriter dados = new FileWriter(arquivo);
 				BufferedWriter escreve = new BufferedWriter(dados);
 				try {
-						escreve.write(valorArquivo);
-						escreve.close();
+					escreve.write(valorArquivo);
+					escreve.close();
 						
 				} finally {
 					escreve = null;

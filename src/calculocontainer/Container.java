@@ -1,6 +1,6 @@
-package calculoContainer;
+package calculocontainer;
 
-import calculoContainer.Caixa;
+import calculocontainer.Caixa;
 
 public class Container {
 

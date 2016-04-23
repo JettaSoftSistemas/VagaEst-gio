@@ -2,7 +2,7 @@ package fibonacci;
 
 import javax.swing.JOptionPane;
 import fibonacci.CriaFibonacci;
-import rotinasIo.CriaSalvaArquivo;
+import rotinasio.CriaSalvaArquivo;
 
 public class ExecutaFibonacci {
 

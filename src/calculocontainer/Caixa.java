@@ -1,4 +1,4 @@
-package calculoContainer;
+package calculocontainer;
 
 public class Caixa {
 
@@ -107,7 +107,7 @@ public class Caixa {
 
 	public int retornaTotalCaixas(int totalCaixasLargura, int totalCaixasAltura, int totalCaixasComprimento) {
 		
-		//Para fins de Coordenadas define a quantidade de caixas por ALTURA/LARGURA/COMPRIMENTO				
+		//Para fins de Coordenadas define a quantidade de caixas por LARGURA/ALTURA/COMPRIMENTO				
 		setQuantidadeTotalLargura( totalCaixasLargura );
 		setQuantidadeTotalAltura( totalCaixasAltura);
 		setQuantidadeTotalComprimento( Math.round( totalCaixasComprimento ));

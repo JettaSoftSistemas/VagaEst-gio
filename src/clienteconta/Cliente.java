@@ -1,4 +1,4 @@
-package clienteConta;
+package clienteconta;
 
 class Cliente {
 

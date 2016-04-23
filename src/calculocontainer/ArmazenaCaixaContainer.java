@@ -1,12 +1,12 @@
-package calculoContainer;
+package calculocontainer;
 
 import java.util.ArrayList;
 import java.util.List;
 
 import javax.swing.JOptionPane;
 
-import calculoContainer.Caixa;
-import calculoContainer.Container;
+import calculocontainer.Caixa;
+import calculocontainer.Container;
 
 public class ArmazenaCaixaContainer {	
 	
@@ -49,7 +49,7 @@ public class ArmazenaCaixaContainer {
 		 */
 		try {
 
-			//Propriedades temporárias do container apenas para fisns de Cálculo
+			//Propriedades temporárias do container apenas para fins de Cálculo
 			float larguraContainer = 2.48f;
 			float comprimentoContainer = 10.0f;
 			float alturaContainer = 3.28f;			

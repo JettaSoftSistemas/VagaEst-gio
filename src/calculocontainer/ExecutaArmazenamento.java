@@ -1,7 +1,8 @@
-package calculoContainer;
+package calculocontainer;
 
-import calculoContainer.ArmazenaCaixaContainer;
 import javax.swing.JOptionPane;
+
+import calculocontainer.ArmazenaCaixaContainer;
 
 public class ExecutaArmazenamento {	
 

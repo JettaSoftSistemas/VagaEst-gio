@@ -41,7 +41,7 @@ public class CriaFibonacci {
 		try {
 
 			/** 
-			 * " Bem na internet tem vários exemplos desde algoritmo para copiar/colar, mas optei por desenvolver o meu próprio. "
+			 * " Bem na internet tem vários exemplos deste algoritmo para copiar/colar, mas optei por desenvolver o meu próprio. "
 			 * 
 			 * 
 			 * AQUI TEM VÁRIOS EXEMPLOS
