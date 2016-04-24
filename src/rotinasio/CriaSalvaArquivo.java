@@ -9,35 +9,72 @@ import java.io.IOException;
 
 import javax.swing.JOptionPane;
 
+/*	
+ * Esta classe manipula Arquivos Texto no disco rigido
+ * 
+ * @author: Julio Cesar
+ * @version: 1.0
+ * @see: https://github.com/jclafi/VagaEst-gio.git
+ * @see: package rotinasio
+ *  
+*/
+
 public class CriaSalvaArquivo {
 	
 	private String nomeArquivo;
 	private String valorArquivo;
 	
+	/*
+	 * @return valorArquivo
+	 * 					Retorna Valor do Arquivo Texto 
+	 */	
 	public String getValorArquivo() {
 		return valorArquivo;
 	}
+	
+	/*
+	 * @param valorArquivo 
+	 * 					Carrega Conteúdo do Arquivo Texto
+	 */	
 	public void setValorArquivo(String valorArquivo) {
 		this.valorArquivo = valorArquivo;
-	}	
+	}
+	
+	/*
+	 * @return nomeArquivo
+	 * 					Retorna Nome do Arquivo Texto 
+	 */	
 	public String getNomeArquivo() {
 		return nomeArquivo;
 	}
+	
+	/*
+	 * @param nomeArquivo 
+	 * 					Carrega Descrição do Arquivo Texto
+	 */		
 	public void setNomeArquivo(String nomeArquivo) {
 		this.nomeArquivo = nomeArquivo;
 	}
 
+	/*
+	 * @see Constructor
+	 */	
 	public CriaSalvaArquivo() {
 		System.out.println("Início da criação do Objeto CriaSalvaArquivo - Constructor");	
 	}
-	
+
+	/*
+	 * @see Desctructor 
+	 */		
 	public void finalize() {
 		System.out.println("Término do uso Objeto CriaSalvaArquivo - Destructor");
 	}	
 
+	/*
+		Este é o método principal que grava e lê os dados do arquivo   
+    */	
 	public void salvaArquivo() {
 
-		// Cria o objeto que mainpula o arquivo
 		File arquivo = new File(nomeArquivo);
 		try {
 

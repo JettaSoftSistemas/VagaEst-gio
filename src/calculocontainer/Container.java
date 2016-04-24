@@ -2,6 +2,16 @@ package calculocontainer;
 
 import calculocontainer.Caixa;
 
+/*	
+ * Esta classe define regras de negócio para Containers
+ * 
+ * @author: Julio Cesar
+ * @version: 1.0
+ * @see: https://github.com/jclafi/VagaEst-gio.git
+ * @see: package calculocontainer
+ *  
+*/
+
 public class Container {
 
 	private String descricaoContainer;
@@ -9,7 +19,7 @@ public class Container {
 	private float comprimentoContainer;
 	private float alturaContainer;
 	
-	public enum Status_Container { POSSUI_ESPACO, PREENCHIDO }
+	public static enum Status_Container { POSSUI_ESPACO, PREENCHIDO }
 	private Status_Container statusContainer;
 	private Caixa caixasArmazenadas;
 	
@@ -68,7 +78,5 @@ public class Container {
 			caixasArmazenadas = null;
 		
 	}
-	
-	
 
 }

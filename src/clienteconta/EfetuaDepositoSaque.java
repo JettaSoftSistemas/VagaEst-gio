@@ -40,8 +40,6 @@ public class EfetuaDepositoSaque {
 			double vlTransacao = 5000;			
 			if (! objConta.saque(vlTransacao)) 
 				JOptionPane.showMessageDialog(null, "Não foi possível realizar o Saque de " + vlTransacao + ". Saldo Atual: " + objConta.getSaldo());
-			
-			//Log do Saque maior que Saldo			
 			objArquivo.salvaAquivo("Saque_Invalido.txt", "============= " + "Não foi possível realizar o Saque de " + vlTransacao + ". Saldo Atual: " + objConta.getSaldo() + " =============");
 			
 			// Realiza Depósito Negativo
@@ -49,23 +47,17 @@ public class EfetuaDepositoSaque {
 			if (! objConta.deposito(vlTransacao)) {
 				JOptionPane.showMessageDialog(null, "Não foi possível realizar o Depósito de " + vlTransacao + ". Saldo Atual: " + objConta.getSaldo());
 			}
-			
-			//Log do Depósito Negativo
 			objArquivo.salvaAquivo("Deposito_Invalido.txt", "============= " + "Não foi possível realizar o Depósito de " + vlTransacao + ". Saldo Atual: " + objConta.getSaldo() + " =============");			
 			
 			// Realiza Depósito Positivo
 			vlTransacao = 2500;
 			if (! objConta.deposito(vlTransacao)) {
 				JOptionPane.showMessageDialog(null, "Não foi possível realizar o Depósito de " + vlTransacao + ". Saldo Atual: " + objConta.getSaldo());
-				
-				//Log do Depósito Positivo
 				objArquivo.salvaAquivo("Deposito_Positivo.txt", "============= " + "Não foi possível realizar o Depósito de " + vlTransacao + ". Saldo Atual: " + objConta.getSaldo() + " =============");				
 			}
 			else
 			{
 				JOptionPane.showMessageDialog(null, "Depósito de " + vlTransacao + " realizado. Saldo Atual: " + objConta.getSaldo());
-				
-				//Log do Depósito Positivo
 				objArquivo.salvaAquivo("Deposito_Positivo.txt", "============= " + "Depósito de " + vlTransacao + " realizado. Saldo Atual: " + objConta.getSaldo() + " =============");				
 			}
 			
@@ -79,8 +71,6 @@ public class EfetuaDepositoSaque {
 			
 			// Saldo Final
 			JOptionPane.showMessageDialog(null, "Saldo Final: " + objConta.getSaldo());
-			
-			//Log do Saque menor que o saldo
 			objArquivo.salvaAquivo("Saldo_Final.txt", "============= " + "Saldo Final: " + objConta.getSaldo() + " =============");			
 			
 		}

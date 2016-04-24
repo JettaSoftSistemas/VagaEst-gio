@@ -2,29 +2,61 @@ package fibonacci;
 
 import javax.swing.*;
 
+/*	
+ * Esta classe executa o cálculo Fibonacci
+ * 
+ * @author: Julio Cesar
+ * @version: 1.0
+ * @see: https://github.com/jclafi/VagaEst-gio.git
+ * @see: package fibonacci
+ *  
+*/
+
 public class CriaFibonacci {
 
 	private int valorFinal;
 
+	/*
+	 * @return valorFinal
+	 * 					Retorna o Limite de Cálculo do Fibonacci 
+	 */	
 	public int getValorFinal() {
 		return valorFinal;
 	}
+	
+	/*
+	 * @param valorFinal
+	 * 					Carrega o Limite de Cálculo do Fibonacci 
+	 */		
 	public void setValorFinal(int valorFinal) {
 		this.valorFinal = valorFinal;
 	}
 	
+	/*
+	 * Construtor
+	 */	
 	public CriaFibonacci() {
-		System.out.println("Início da criação do Objeto Fibonacci - Constructor");	
+		
+		System.out.println("Início da criação do Objeto Fibonacci - Constructor");
+		
 	}
-	
+
+	/*
+	 * Destructor
+	 */	
 	public void finalize() {
+		
 		System.out.println("Término do uso Objeto Fibonacci - Destructor");
+		
 	}		
 
 	/**
-	 * @deprecated: A Sequência de Fibonacci tem como primeiros termos os números 0 e 1 e, a seguir, cada termo subsequente é obtido pela soma dos dois termos predecessores.
+	 * A Sequência de Fibonacci tem como primeiros termos os números 0 e 1 e, a seguir, 
+	 *   cada termo subsequente é obtido pela soma dos dois termos predecessores.
 	 * 
 	 * @return Sequencia criada
+	 * @see http://www.devmedia.com.br/sequencia-de-fibonacci-em-java/23620
+	 * 
 	 */	
 	public String criaFibonacci() {
 		if (valorFinal <= 0)  {
@@ -41,11 +73,7 @@ public class CriaFibonacci {
 		try {
 
 			/** 
-			 * " Bem na internet tem vários exemplos deste algoritmo para copiar/colar, mas optei por desenvolver o meu próprio. "
-			 * 
-			 * 
-			 * AQUI TEM VÁRIOS EXEMPLOS
-			 * http://www.devmedia.com.br/sequencia-de-fibonacci-em-java/23620 
+			 * Bem na internet tem vários exemplos deste algoritmo para copiar/colar, mas optei por desenvolver o meu próprio. 
 			 */				
 			for (long index = 0; index < valorFinal; index++) {
 				

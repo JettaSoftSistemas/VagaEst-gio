@@ -1,91 +1,109 @@
 package calculocontainer;
 
+/*	
+ * Esta classe define regras de negócio para Caixas
+ * 
+ * @author: Julio Cesar
+ * @version: 1.0
+ * @see: https://github.com/jclafi/VagaEst-gio.git
+ * @see: package calculocontainer
+ *  
+*/
+
 public class Caixa {
 
-	//Atributos da Caixa
+	/*
+	 * Atributos da Caixa
+	 */
 	private String descricao;
 	private float largura;
 	private float comprimento;
 	private float altura;
-	
-	//Controle de Quantidades 
-	private int quantidadeTotal;
-	private int quantidadeArmazenada;
-	private int quantidadeTotalAltura;
-	private int quantidadeTotalLargura;	
-	private int quantidadeTotalComprimento;	
+	/*
+	 * Controle de Quantidades
+	 * Quantidade Total de Caixas a Armazenar
+	 */
+	private int quantidadeTotalArmazenar;
 	
 	/*
-	 * Valida diferentes combinações de armazenamento para Otimizar o espaço de armazenamento 
-	 * COMBINAÇÃO 1 : CONTAINER (LARGURA, ALTURA, COMPRIMENTO) - CAIXA (LARGURA, ALTURA, COMPRIMENTO)
-	 * COMBINAÇÃO 2 : CONTAINER (LARGURA, ALTURA, COMPRIMENTO) - CAIXA (LARGURA, COMPRIMENTO, ALTURA)
-	 * COMBINAÇÃO 3 : CONTAINER (LARGURA, ALTURA, COMPRIMENTO) - CAIXA (COMPRIMENTO, ALTURA, LARGURA)
-	 * COMBINAÇÃO 4 : CONTAINER (LARGURA, ALTURA, COMPRIMENTO) - CAIXA (COMPRIMENTO, LARGURA, ALTURA)
-	 * COMBINAÇÃO 5 : CONTAINER (LARGURA, ALTURA, COMPRIMENTO) - CAIXA (ALTURA, COMPRIMENTO, LARGURA)
-	 * COMBINAÇÃO 6 : CONTAINER (LARGURA, ALTURA, COMPRIMENTO) - CAIXA (ALTURA, LARGURA, COMPRIMENTO)		 	  
+	 * Quantidade Total do tipo de caixa que cabe no Container
 	 */
-	public enum Combinacao_Armazenamento { NAO_DEFINIDO, COMBINACAO_1, COMBINACAO_2, COMBINACAO_3, COMBINACAO_4, COMBINACAO_5, COMBINACAO_6 }
-	private Combinacao_Armazenamento combinacao;
+	private int quantidadeMaxArmazenada;
+	private int quantidadeMaximaAltura;
+	private int quantidadeMaximaLargura;	
+	private int quantidadeMaximaComprimento;	
+	/*
+	 *  EXTRA REQUISITOS DO TESTE
+	 * Valida diferentes combinações de armazenamento para Otimizar o espaço de armazenamento 
+	 * COMBINAÇÃO 1 : CONTAINER (LARGURA, ALTURA, COMPRIMENTO) equivale a (LARGURA, ALTURA, COMPRIMENTO) da CAIXA
+	 * COMBINAÇÃO 2 : CONTAINER (LARGURA, ALTURA, COMPRIMENTO) equivale a (LARGURA, COMPRIMENTO, ALTURA) da CAIXA
+	 * COMBINAÇÃO 3 : CONTAINER (LARGURA, ALTURA, COMPRIMENTO) equivale a (COMPRIMENTO, ALTURA, LARGURA) da CAIXA
+	 * COMBINAÇÃO 4 : CONTAINER (LARGURA, ALTURA, COMPRIMENTO) equivale a (COMPRIMENTO, LARGURA, ALTURA) da CAIXA
+	 * COMBINAÇÃO 5 : CONTAINER (LARGURA, ALTURA, COMPRIMENTO) equivale a (ALTURA, COMPRIMENTO, LARGURA) da CAIXA
+	 * COMBINAÇÃO 6 : CONTAINER (LARGURA, ALTURA, COMPRIMENTO) equivale a (ALTURA, LARGURA, COMPRIMENTO) da CAIXA		 	  
+	 */
+	public static enum Combinacao_Max_Armazenamento { NAO_DEFINIDO, COMBINACAO_1, COMBINACAO_2, COMBINACAO_3, COMBINACAO_4, COMBINACAO_5, COMBINACAO_6 }
+	private Combinacao_Max_Armazenamento combinacaoMaxima;
 	
-	public int getQuantidadeTotalAltura() {
-		return quantidadeTotalAltura;
+	public int getQuantidadeMaximaAltura() {
+		return this.quantidadeMaximaAltura;
 	}
-	public void setQuantidadeTotalAltura(int quantidadeTotalAltura) {
-		this.quantidadeTotalAltura = quantidadeTotalAltura;
+	public void setQuantidadeMaximaAltura(int quantidadeMaximaAltura) {
+		this.quantidadeMaximaAltura = quantidadeMaximaAltura;
 	}
-	public int getQuantidadeTotalLargura() {
-		return quantidadeTotalLargura;
+	public int getQuantidadeMaximaLargura() {
+		return this.quantidadeMaximaLargura;
 	}
-	public void setQuantidadeTotalLargura(int quantidadeTotalLargura) {
-		this.quantidadeTotalLargura = quantidadeTotalLargura;
+	public void setQuantidadeMaximaLargura(int quantidadeMaximaLargura) {
+		this.quantidadeMaximaLargura = quantidadeMaximaLargura;
 	}
-	public int getQuantidadeTotalComprimento() {
-		return quantidadeTotalComprimento;
+	public int getQuantidadeMaximaComprimento() {
+		return this.quantidadeMaximaComprimento;
 	}
-	public void setQuantidadeTotalComprimento(int quantidadeTotalComprimento) {
-		this.quantidadeTotalComprimento = quantidadeTotalComprimento;
+	public void setQuantidadeMaximaComprimento(int quantidadeMaximaComprimento) {
+		this.quantidadeMaximaComprimento = quantidadeMaximaComprimento;
 	}
-	public Combinacao_Armazenamento getCombinacao() {
-		return combinacao;
+	public Combinacao_Max_Armazenamento getCombinacaoMaxima() {
+		return this.combinacaoMaxima;
 	}
-	public void setCombinacao(Combinacao_Armazenamento combinacao) {
-		this.combinacao = combinacao;
+	public void setCombinacaoMaxima(Combinacao_Max_Armazenamento combinacaoMaxima) {
+		this.combinacaoMaxima = combinacaoMaxima;
 	}	
 	public String getDescricao() {
-		return descricao;
+		return this.descricao;
 	}
 	private void setDescricao(String descricao) {
 		this.descricao = descricao;
 	}
 	public float getLargura() {
-		return largura;
+		return this.largura;
 	}
 	private void setLargura(float largura) {
 		this.largura = largura;
 	}
 	public float getComprimento() {
-		return comprimento;
+		return this.comprimento;
 	}
 	private void setComprimento(float comprimento) {
 		this.comprimento = comprimento;
 	}
 	public float getAltura() {
-		return altura;
+		return this.altura;
 	}
 	private void setAltura(float altura) {
 		this.altura = altura;
 	}	
-	public int getQuantidadeTotal() {
-		return quantidadeTotal;
+	public int getQuantidadeTotalArmazenar() {
+		return this.quantidadeTotalArmazenar;
 	}
 	private void setQuantidadeTotal(int quantidadeTotal) {
-		this.quantidadeTotal = quantidadeTotal;
+		this.quantidadeTotalArmazenar = quantidadeTotal;
 	}	
-	public int getQuantidadeArmazenada() {
-		return quantidadeArmazenada;
+	public int getQuantidadeMaxArmazenada() {
+		return this.quantidadeMaxArmazenada;
 	}
-	public void setQuantidadeArmazenada(int quantidadeArmazenada) {
-		this.quantidadeArmazenada = quantidadeArmazenada;
+	public void setQuantidadeMaxArmazenada(int quantidadeArmazenada) {
+		this.quantidadeMaxArmazenada = quantidadeArmazenada;
 	}
 	
 	public Caixa(String descricao, int quantidadeTotaCaixas, float largura, float comprimento, float altura) {
@@ -95,7 +113,7 @@ public class Caixa {
 		setComprimento(comprimento);
 		setAltura(altura);
 		setQuantidadeTotal(quantidadeTotaCaixas);
-		setCombinacao(Caixa.Combinacao_Armazenamento.NAO_DEFINIDO);
+		setCombinacaoMaxima(Caixa.Combinacao_Max_Armazenamento.NAO_DEFINIDO);
 		
 	}
 	
@@ -105,14 +123,27 @@ public class Caixa {
 		
 	}
 
-	public int retornaTotalCaixas(int totalCaixasLargura, int totalCaixasAltura, int totalCaixasComprimento) {
+	/*
+	 * Para fins de Log define a quantidade de caixas armazenadas na LARGURA / ALTURA / COMPRIMENTO no Container				
+	 */
+	public int retornaCaixasContainer(int totalCaixasLargura, int totalCaixasAltura, int totalCaixasComprimento) {
+
+		setQuantidadeMaximaLargura(totalCaixasLargura);
+		setQuantidadeMaximaAltura(totalCaixasAltura);
+		setQuantidadeMaximaComprimento(totalCaixasComprimento);
+		setQuantidadeMaxArmazenada(((totalCaixasComprimento * totalCaixasLargura) * totalCaixasAltura));
 		
-		//Para fins de Coordenadas define a quantidade de caixas por LARGURA/ALTURA/COMPRIMENTO				
-		setQuantidadeTotalLargura( totalCaixasLargura );
-		setQuantidadeTotalAltura( totalCaixasAltura);
-		setQuantidadeTotalComprimento( Math.round( totalCaixasComprimento ));
+		return getQuantidadeMaxArmazenada();
 		
-		return Math.round( (( totalCaixasLargura * totalCaixasAltura ) * totalCaixasComprimento) );
+	}
+	
+	/*
+	 * Para fins de Log define a quantidade de caixas armazenadas na LARGURA / COMPRIMENTO no Container
+	 */
+	public void defineQtdCaixas(int totalCaixasLargura, int totalCaixasComprimento) {
+		
+		setQuantidadeMaximaLargura(totalCaixasLargura);
+		setQuantidadeMaximaComprimento(totalCaixasComprimento);
 		
 	}	
 	

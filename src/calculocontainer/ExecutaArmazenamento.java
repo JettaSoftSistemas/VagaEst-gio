@@ -11,10 +11,10 @@ public class ExecutaArmazenamento {
 		ArmazenaCaixaContainer objArmazena = new ArmazenaCaixaContainer(); 
 		try {
 			
-			if (! objArmazena.executaArmazenagem()) 
+			if ((! objArmazena.defineCaixaContainer()) || (! objArmazena.defineTotalMaximoCaixaContainer())) 
 				JOptionPane.showMessageDialog(null, "Atenção não foi possível Armazenar as Caixas!" );			
 			else {
-				objArmazena.defineCoordenadas();
+				objArmazena.imrimeDadosArmazenamentoMaximoCaixaContainer();
 			}
 		}
 		catch (Exception ex) {
