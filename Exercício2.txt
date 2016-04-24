@@ -1,0 +1,21 @@
+
+package Aula;
+
+import java.util.ArrayList;
+
+public class Exercicio2 {
+
+    public static void main(String[] args) {
+        ArrayList<Integer> num = new ArrayList<>();
+        int soma;
+        num.add(1);
+        num.add(1);
+        int i = 0;
+        while (i < 40) { // Definir a quantidade de números
+            soma = num.get(i) + num.get(i + 1);
+            num.add(soma);
+            i++;
+        }
+        System.out.println(num);
+    }
+}

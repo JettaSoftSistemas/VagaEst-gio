@@ -1,0 +1,37 @@
+package Aula;
+
+public class Exercicio4 {
+
+    public static void main(String[] args) {
+        StringBuilder sb = new StringBuilder();
+        double lc[] = new double[]{0.253, 0.263, 0.203, 0.170, 0.285};
+        double cc[] = new double[]{0.608, 0.480, 0.403, 0.530, 0.435};
+        double lco = 2.48;
+        double cco = 10;
+        double caixaQuantidadeMaxLargura[] = new double[lc.length];
+        double caixaQuantidadeMaxComprimento[] = new double[lc.length];
+        for (int i = 0; i < caixaQuantidadeMaxLargura.length; i++) {
+            sb.append("Caixa ").append(i + 1).append("\n");
+            caixaQuantidadeMaxLargura[i] = lco / lc[i];
+            sb.append("Qtd max Largura: ").append(caixaQuantidadeMaxLargura[i]).append("\n");
+            caixaQuantidadeMaxComprimento[i] = lco / cc[i];
+            sb.append("Qtd max Comprimento: ").append(caixaQuantidadeMaxComprimento[i]).append("\n");
+        }
+        sb.append("Combinações").append("\n");
+        for (int i = 0; i < lc.length; i++) {
+            sb.append("Caixa ").append(i + 1).append("\n");
+            double grupoLargura[] = new double[(int) caixaQuantidadeMaxLargura[i] + 1];
+            double grupoComprimento[] = new double[(int) caixaQuantidadeMaxComprimento[i] + 1];
+            for (int j = 0; j < caixaQuantidadeMaxLargura[i]; j++) {
+                grupoLargura[i] = j * lc[i];
+                sb.append("Grupo Largura: ").append(grupoLargura[i]).append("\n");
+            }
+            for (int j = 0; j < caixaQuantidadeMaxComprimento[i]; j++) {
+                grupoComprimento[i] = j * cc[i];
+                sb.append("Grupo Comprimento: ").append(grupoComprimento[i]).append("\n");
+            }
+        }
+        System.out.println(sb);
+    }
+
+}

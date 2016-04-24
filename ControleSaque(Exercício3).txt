@@ -1,0 +1,52 @@
+package Aula;
+
+import java.util.ArrayList;
+
+public class ControleSaque {
+
+    ArrayList<ClienteBean> dados = new ArrayList<>();
+
+    private int pos;
+
+    public boolean isExistente(String conta, String res) {
+        int i = 0;
+        for (ClienteBean item : dados) {
+            if (conta.equals(item.getConta()) && res.equals(item.getSenha())) {
+                pos = i;
+                return true;
+            }
+            i++;
+        }
+        return false;
+    }
+
+    public double mostrarSaldo() {
+        double saldo;
+        saldo = dados.get(pos).getSaldo();
+        return saldo;
+    }
+
+    public void inserir(ClienteBean cliente) {
+        dados.add(cliente);
+    }
+
+    public boolean isRepetido(String conta) {
+        for (ClienteBean item : dados) {
+            if (conta.equals(item.getConta())) {
+                return false;
+            }
+        }
+        return true;
+    }
+
+    public double calculoSaldo(double valor) {
+        double saldo;
+        saldo = dados.get(pos).getSaldo();
+        double res = saldo - valor;
+        if (res >= 0) {
+            dados.get(pos).setSaldo(res);
+        }
+        return res;
+    }
+
+}
