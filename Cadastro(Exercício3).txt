@@ -1,0 +1,42 @@
+package Aula;
+
+import javax.swing.JOptionPane;
+
+public class Exercicio3 {
+
+    public static void main(String[] args) {
+        int escolha;
+        ControleSaque cs = new ControleSaque();
+        escolha = JOptionPane.showConfirmDialog(null, "Possui conta?", "Sistema", 1);
+        while (escolha == 0 || escolha == 1) {
+            ClienteBean cliente = new ClienteBean();
+            if (escolha == 0) {
+                String x = JOptionPane.showInputDialog(null, "Informe a conta: ", "Login", 1);
+                String y = JOptionPane.showInputDialog(null, "Informe a senha: ", "Login", 1);
+                if (cs.isExistente(x, y)) {
+                    JOptionPane.showMessageDialog(null, "Saldo atual: " + cs.mostrarSaldo());
+                    double valor = new Double((JOptionPane.showInputDialog(null, "Informe o valor a ser debitado do seu saldo: ", "Saque", 1)));
+                    double res = cs.calculoSaldo(valor);
+                    if (res < 0) {
+                        JOptionPane.showMessageDialog(null, "Favor informar um valor menor ou igual ao valor do saldo atual!");
+                    } else {
+                        JOptionPane.showMessageDialog(null, "O novo saldo é: " + res);
+                    }
+                } else {
+                    JOptionPane.showMessageDialog(null, "Conta e/ou senha inválidos!");
+                }
+            } else if (escolha == 1) {
+                cliente.setConta(JOptionPane.showInputDialog(null, "Informe a conta: ", "Nova Conta", 1));
+                String conta = cliente.getConta();
+                cliente.setSenha(JOptionPane.showInputDialog(null, "Informe a senha: ", "Nova Conta", 1));
+                cliente.setSaldo(new Double(JOptionPane.showInputDialog(null, "Informe o saldo inicial: ", "Nova Conta", 1)));
+                if (!cs.isRepetido(conta)) {
+                    JOptionPane.showMessageDialog(null, "Conta já informada!");
+                } else {
+                    cs.inserir(cliente);
+                }
+            }
+            escolha = JOptionPane.showConfirmDialog(null, "Possui conta?");
+        }
+    }
+}
