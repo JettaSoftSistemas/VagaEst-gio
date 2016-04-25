@@ -1,0 +1,26 @@
+Linguagem JAVA
+Existem muitas linguagens no mercado atual que permitem desenvolver aplicações cada dia 
+mais robustas e complexas, estamos falando de linguagens como C# ou Java, que dominam.
+Java tem ganhado uma grande parte do mercado e vem evoluindo constantemente, devido a 
+muitas vantagens interessantes como ser um sistema multiplataforma, ou seja, não precisa 
+a alteração do código e pode rodar em qualquer sistema operacional devido a JVM, 
+uma máquina virtual que pode ser implementada em diversos dispositivos.
+ 
+Outra vantagem é o fato de ser uma linguagem orientada a objetos, que imita o mundo real 
+e facilita a programação, e suporta processamento paralelo. Também é uma linguagem de 
+alto nível que permite o gerenciamento de memória automático e um coletor de lixo, 
+permitindo assim facilidade de desenvolvimento para o programador.  
+Além disso, possui uma grande comunidade no mundo, o que permite a troca de informações 
+e a ajuda em diversos pontos do desenvolvimento, assim como uma grande quantidade de 
+frameworks que facilitam o trabalho.
+
+Devido a isso Java tem se tornado em uma das linguagens mais usadas hoje, principalmente 
+na WEB, onde bancos, empresas, jogos, etc usam essa linguagem para implementar seus sistemas.
+Algumas das desvantagens que podemos citar são que primeiramente a pré-compilação demora
+muito tempo, o que faz que os programas demorem mais para iniciar. Pode-se mencionar também
+a disparidade dos pontos flutuantes com muitos processadores o que faz que a aplicação se 
+torne mais lenta se fazem muitos cálculos, ou muito processamento numérico.
+
+Mas a pesar de tudo isso, o Java continua em evolução constante e será muito utilizado 
+principalmente para arquiteturas web e mobile e computação nas nuvens que são as tendências
+para os próximos anos.

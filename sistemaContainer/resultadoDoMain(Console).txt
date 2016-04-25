@@ -1,0 +1,24 @@
+Melhor Combinação: 2.481
+Quantidade de caixa considerando largura: 5
+Quantidade de caixa considerando comprimento: 2
+Coordenadas X: 0.0, 0.253
+Coordenadas Y: 0.0, 0.518
+Coordenadas Z: 0.0, 0.608
+Coordenadas X: 0.253, 0.506
+Coordenadas Y: 0.0, 0.518
+Coordenadas Z: 0.0, 0.608
+Coordenadas X: 0.506, 0.759
+Coordenadas Y: 0.0, 0.518
+Coordenadas Z: 0.0, 0.608
+Coordenadas X: 0.759, 1.012
+Coordenadas Y: 0.0, 0.518
+Coordenadas Z: 0.0, 0.608
+Coordenadas X: 1.012, 1.2650000000000001
+Coordenadas Y: 0.0, 0.518
+Coordenadas Z: 0.0, 0.608
+Coordenadas X: 1.2650000000000001, 1.8730000000000002
+Coordenadas Y: 0.0, 0.518
+Coordenadas Z: 0.0, 0.253
+Coordenadas X: 1.8730000000000002, 2.4810000000000003
+Coordenadas Y: 0.0, 0.518
+Coordenadas Z: 0.0, 0.253
