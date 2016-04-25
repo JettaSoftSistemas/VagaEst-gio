@@ -1,0 +1,1 @@
+============= Não foi possível realizar o Saque de 5000.0. Saldo Atual: 1000.0 =============
